@@ -38,6 +38,6 @@
   ansible.builtin.systemd:
     state: started
     enabled: true
-    name: httpd
+    name: nginx
 
 
