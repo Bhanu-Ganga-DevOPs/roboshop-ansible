@@ -1,3 +1,15 @@
-- name: Application setup
-  ansible.builtin.debug:
-    msg: component - {{ role_name }}
+#
+#mysql_root_password=$1
+#
+#if [ -z "$mysql_root_password" ]; then
+#echo Input MySQL Root Password Missing
+#exit
+#fi
+#
+
+
+- name: Shipping Setup
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: java
+
