@@ -1,6 +1,6 @@
 - name: copy logstash
   ansible.builtin.template:
-    src: logstash.yml
+    src: logstash.conf
     dest: /etc/logstash/conf.d/logstash.conf
 
 - name: start logstash
