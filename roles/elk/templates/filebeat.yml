@@ -5,7 +5,7 @@ filebeat.inputs:
   id: {{ component }}
   enabled: true
   paths:
-    - {{ log_file }}
+    - /var/log/*.log
   fields:
     component: {{ component }}
 
