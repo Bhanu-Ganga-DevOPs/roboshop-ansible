@@ -36,3 +36,12 @@
     name: nginx
 
 
+- name: Import filebeat
+  ansible.builtin.import_role:
+    name: elk
+    tasks_from: filebeat
+
+
+
+
+
