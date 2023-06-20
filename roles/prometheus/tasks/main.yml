@@ -1,0 +1,11 @@
+- name: prometheus config
+  ansible.builtin.template:
+    src: node_exporter.yml
+    dest: /opt/prometheus/node_exporter.yml
+
+- name: Restart Prometheus
+  ansible.builtin.systemd:
+    name: prometheus
+    state: restarted
+    enabled: true
+
