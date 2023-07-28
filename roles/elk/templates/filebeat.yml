@@ -1,11 +1,9 @@
-
-
 filebeat.inputs:
 - type: filestream
   id: {{ component }}
   enabled: true
   paths:
-    - /var/log/*.log
+    - {{ log_file }}
   fields:
     component: {{ component }}
 
